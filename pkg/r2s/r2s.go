@@ -17,7 +17,7 @@ func New() *R2s {
 		log:           logrus.New(),
 		arg:           argparse.NewParser("redis_p2s", "Redis Production to Sandbox cloning tool"),
 		workerChannel: make(chan *copyStruct),
-		workersCount:  5000,
+		workersCount:  100,
 		configFile:    fmt.Sprintf("%s/config.yml", path.Join(path.Dir(os.Args[0]))),
 	}
 	return s
