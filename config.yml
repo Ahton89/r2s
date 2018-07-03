@@ -1,0 +1,9 @@
+hashesToCopy:
+ - "refs:airports"
+ - "refs:cities"
+ - "refs:countries"
+ - "refs:airlines"
+ - "refs:alliances"
+ - "refs:timezones"
+ - "refs:stations"
+ - "refs:aircrafts"
