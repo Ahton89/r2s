@@ -1,8 +1,8 @@
 package r2b
 
 import (
-	"github.com/akamensky/argparse"
 	"github.com/Sirupsen/logrus"
+	"github.com/akamensky/argparse"
 	"github.com/go-redis/redis"
 	"sync"
 )

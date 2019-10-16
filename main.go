@@ -1,6 +1,6 @@
 package main
 
-import "./pkg/r2s"
+import "github.com/Ahton89/r2s/pkg/r2s"
 
 func main() {
 	s := r2b.New()

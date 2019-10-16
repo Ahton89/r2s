@@ -1,14 +1,14 @@
 package r2b
 
 import (
+	"errors"
+	"fmt"
 	"github.com/Sirupsen/logrus"
 	"github.com/akamensky/argparse"
-	"os"
-	"fmt"
-	"io/ioutil"
-	"path"
-	"errors"
 	"gopkg.in/yaml.v2"
+	"io/ioutil"
+	"os"
+	"path"
 	"sync"
 )
 
@@ -63,4 +63,3 @@ func (s *R2s) getConfig() error {
 	}
 	return err
 }
-
