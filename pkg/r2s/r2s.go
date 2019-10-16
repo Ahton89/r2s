@@ -12,10 +12,12 @@ import (
 	"sync"
 )
 
+const version = "0.0.3"
+
 func New() *R2s {
 	s := &R2s{
 		log:           logrus.New(),
-		arg:           argparse.NewParser("redis_p2s", "Redis Production to Sandbox cloning tool"),
+		arg:           argparse.NewParser("redis_p2s", fmt.Sprintf("Redis Production to Sandbox cloning tool v.%s", version)),
 		workerChannel: make(chan *copyStruct),
 		workersCount:  7,
 		configFile:    fmt.Sprintf("%s/config.yml", path.Join(path.Dir(os.Args[0]))),

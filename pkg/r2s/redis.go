@@ -15,7 +15,7 @@ func (s *R2s) redisConnect(host string, db int) *redis.Client {
 
 	_, err := c.Ping().Result()
 	if err != nil {
-		s.log.Errorf("Can not connect to redis %s", host)
+		s.log.Errorf("Can not connect to redis %s\n", host)
 		os.Exit(1)
 	}
 
