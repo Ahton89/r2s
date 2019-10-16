@@ -4,8 +4,8 @@ services:
   - docker
 
 before_install:
-  - docker build --no-cache -t ${REGISTRY_URL}/r2s:latest .
+  - docker build --no-cache -t ${REGISTRY_URL}/r2s:${TRAVIS_TAG} .
 
 script:
   - echo "$REGISTRY_P" | docker login -u "$REGISTRY_U" --password-stdin "$REGISTRY_URL"
-  - docker push ${REGISTRY_URL}/r2s:latest
+  - docker push ${REGISTRY_URL}/r2s:${TRAVIS_TAG}
